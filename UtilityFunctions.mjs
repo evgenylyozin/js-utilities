@@ -1,10 +1,10 @@
-import * as ChangeFunctions from './changeFunctions.mjs'
-import { memoize } from './memoize.mjs'
-import { none } from './none.mjs'
-import * as Objects from './objects.mjs'
-import * as Once from './once.mjs'
-import { range } from './range.mjs'
-import * as Wrappers from './wrappers.mjs'
+import * as ChangeFunctions from './src/changeFunctions.mjs'
+import { memoize } from './src/memoize.mjs'
+import { none } from './src/none.mjs'
+import * as Objects from './src/objects.mjs'
+import * as Once from './src/once.mjs'
+import { range } from './src/range.mjs'
+import * as Wrappers from './src/wrappers.mjs'
 
 export const UtilityFunctions = {
   ChangeFunctions,
