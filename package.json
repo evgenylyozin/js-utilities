@@ -2,7 +2,8 @@
   "name": "@evgenylyozin/utilityfunctions",
   "version": "1.1.0",
   "description": "Utility functions for JS development",
-  "main": "index.js",
+  "main": "./bundle/UtilityFunctions.js",
+  "types": "./bundle/types",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
