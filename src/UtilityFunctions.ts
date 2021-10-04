@@ -6,7 +6,7 @@ import * as Once from './once'
 import { range } from './range'
 import * as Wrappers from './wrappers'
 
-export default {
+const UtilityFunctions = {
   ChangeFunctions,
   memoize,
   none,
@@ -15,3 +15,5 @@ export default {
   range,
   Wrappers
 } 
+
+export default UtilityFunctions
