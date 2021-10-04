@@ -1,6 +1,6 @@
 {
   "name": "@evgenylyozin/utilityfunctions",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Utility functions for JS development",
   "main": "./bundle/UtilityFunctions.js",
   "types": "./bundle/types",
