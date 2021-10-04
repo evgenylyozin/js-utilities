@@ -1,6 +1,8 @@
 // Обернуть целевую функцию лог функционалом
 
-const addLogging = (fn, logger = console.log) => (...args) => {
+import { commonDataTypes, genericFunction } from "./types/types"
+
+const addLogging = (fn: genericFunction<any, any>, logger = console.log) => (...args: commonDataTypes[]) => {
   logger(`Входим в ${fn.name}: ${args}`)
   try {
     const valueToReturn = fn(...args)
@@ -12,9 +14,13 @@ const addLogging = (fn, logger = console.log) => (...args) => {
   }
 }
 
+const returnAnything = (v: any) => v
+
+console.log(addLogging(returnAnything)('anything'))
+
 // Обернуть функцию функционалом получения таймингов её выполнения
 
-const testPerformance = (fn, logger, timer) => (...args) => {
+const testPerformance = (fn: genericFunction<any, any>, logger?: genericFunction<any, any>, timer?: genericFunction<void, any>) => (...args: commonDataTypes[]) => {
   const log = logger || ( (text, name, tStart, tEnd) => console.log(`${name} - ${text} ${tEnd - tStart} ms`) )
   const time = timer || ( () => new Date(Date.now()) )
   const tStart = time()
@@ -24,16 +30,20 @@ const testPerformance = (fn, logger, timer) => (...args) => {
     log("Функция успешно отработала", fn.name, tStart, time())
     return valueToReturn
   } catch (e) {
-    log(`Во время выполнения функции произошла ошибка: ${e}`, fn.name, tStart, getTime())
+    log(`Во время выполнения функции произошла ошибка: ${e}`, fn.name, tStart, time())
     throw e
   }
 }
 
+console.log(testPerformance(returnAnything)('anything'))
+
 // Обернуть функцию в промис
 
-const promisify = fn => (...args) => new Promise(
-  (resolve, reject) => fn(...args, (err, data) => (err ? reject(err) : resolve(data)))
+const promisify = (fn: genericFunction<any, any>) => (...args: commonDataTypes[]) => new Promise(
+  (resolve, reject) => fn(...args, (err: any, data: any) => (err ? reject(err) : resolve(data)))
 )
+
+console.log(promisify(returnAnything)('anything'))
 
 export {
   addLogging,
