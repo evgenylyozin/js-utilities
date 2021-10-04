@@ -3,7 +3,7 @@
   "version": "1.1.3",
   "description": "Utility functions for JS development",
   "main": "./bundle/UtilityFunctions.js",
-  "types": "./bundle/types",
+  "types": "./bundle/types/UtilityFunctions.d.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
