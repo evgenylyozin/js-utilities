@@ -6,7 +6,7 @@ import * as Once from './once'
 import { range } from './range'
 import * as Wrappers from './wrappers'
 
-export const UtilityFunctions = {
+export default {
   ChangeFunctions,
   memoize,
   none,
