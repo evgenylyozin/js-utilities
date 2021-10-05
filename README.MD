@@ -1,3 +1,9 @@
+# Внимание, пакет создан в учебных целях.
+## Недостаточно протестирован и не поддерживается разработчиком. Не рекомендуется использовать в продакшн версии приложения.
+
+# The package was created for educational purposes.
+## Insufficiently tested and not supported by the developer. It is not recommended to use in the production version of the application.
+
 npm i @evgenylyozin/utilityfunctions
 
 import UtilityFunctions from '@evgenylyozin/utilityfunctions'
