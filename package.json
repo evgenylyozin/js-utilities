@@ -9,5 +9,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evgeny Lyozin (evgenylyozindev@gmail.com)",
-  "license": "ISC"
+  "license": "MIT"
 }
